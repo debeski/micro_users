@@ -69,17 +69,3 @@ users/
 └── migrations/    # Database migrations
 ```
 ```
-
-## **Directory structure:**
-```
-micro-users/
-├── users/          # This is the actual package name
-│   ├── __init__.py
-│   ├── models.py
-│   ├── views.py
-│   ├── urls.py
-│   ├── admin.py
-│   └── templates/
-├── setup.py
-└── README.md
-```
