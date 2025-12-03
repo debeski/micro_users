@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "micro_users"
-version = "1.0.2"
+version = "1.0.3"
 description = "Arabic Django user management app with abstract user, permissions, and activity logging"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -20,10 +20,10 @@ keywords = ["django", "users", "permissions", "authentication"]
 
 # Dependencies
 dependencies = [
-    "Django>=5.17",
+    "Django>=5.1",
     "django-crispy-forms>=2.4",
-    "django-tables2>=2.7.5",
-    "django-filter>=25.1",
+    "django-tables2>=2.7",
+    "django-filter>=24.3",
     "pillow>=11.0",
     "babel>=2.1",
 ]

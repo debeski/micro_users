@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="micro_users",
-    version="1.0.2",
+    version="1.0.3",
     author="DeBeski",
     author_email="debeski1@gmail.com",
     description="Arabic django user management app with abstract user, permissions, and activity logging",
@@ -28,7 +28,7 @@ setup(
     ],
     python_requires=">=3.9",
     install_requires=[
-        "Django>=5.17",
+        "Django>=5.1",
         "django-crispy-forms>=2.4",
         "django-tables2>=2.7",
         "django-filter>=24.3",
