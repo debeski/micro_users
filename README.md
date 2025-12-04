@@ -90,3 +90,4 @@ users/
 | v1.2.0   | • Added User Details view with specific user activity log |
 | v1.2.1   | • Fixed a minor import bug |
 | v1.2.3   | • Separated user detail view from table for consistency<br> • Optimized the new detail + log view for optimal compatibiliyy with users |
+| v1.2.4   | • Fixed a couple of visual inconsistencies |
