@@ -9,12 +9,12 @@
                     <i class="bi bi-person-lines-fill text-dark me-1 h5"> </i> عرض
                 </a>
             </li> {% endcomment %}
-            {% if not record.is_superuser %}
             <li>
                 <a class="dropdown-item" href="{% url 'user_detail' record.pk %}" title="عرض">
                     <i class="bi bi-person-dash-fill text-dark me-1 h5"> </i> عرض
                 </a>
             </li>
+            {% if not record.is_superuser %}
             <li>
                 <a class="dropdown-item" href="{% url 'edit_user' record.pk %}" title="تعديل">
                     <i class="bi bi-person-dash-fill text-dark me-1 h5"> </i> تعديل

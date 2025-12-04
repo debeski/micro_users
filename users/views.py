@@ -141,28 +141,25 @@ class UserActivityLogView(LoginRequiredMixin, UserPassesTestMixin, SingleTableVi
         return context
 
 
-class UserDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView, SingleTableView):
+class UserDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
     model = User
     template_name = "users/user_detail.html"
-    context_object_name = "detail_user"  # Keep clear naming
-    table_class = UserActivityLogTableNoUser
-    paginate_by = 10
 
     def test_func(self):
         # only staff can view user detail page
         return self.request.user.is_staff
 
-    def get_queryset(self):
-        # This is for the DetailView (only target user)
-        return User.objects.all()
-
-    def get_table_data(self):
-        # filter log table to user in URL
-        return UserActivityLog.objects.filter(user=self.get_object()).order_by('-timestamp')
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['table'] = self.get_table()  # table instance
+        
+        # self.object is the User instance
+        logs_qs = UserActivityLog.objects.filter(user=self.object).order_by('-timestamp')
+        
+        # Create table manually
+        table = UserActivityLogTableNoUser(logs_qs)
+        RequestConfig(self.request, paginate={'per_page': 10}).configure(table)
+        
+        context['table'] = table
         return context
 
 

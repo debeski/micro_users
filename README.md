@@ -20,6 +20,7 @@
 - Custom AbstractUser model
 - User permissions system  
 - Activity logging (login/logout, CRUD tracking)
+- Specific User detail and log view *new*
 - Localization support
 - Admin interface integration
 - CRUD views and templates
@@ -79,12 +80,13 @@ users/
 
 | Version  | Changes |
 |----------|---------|
-| v1.0.0   | Initial release as pip package |
-| v1.0.1   | Fixed a couple of new issues as a pip package |
-| v1.0.2   | Fixed the readme and building files |
-| v1.0.3   | Still getting the hang of this pip publish thing |
-| v1.0.4   | Honestly still messing with and trying settings and stuff out |
-| v1.1.0   | OK, finally a working seamless micro-users app |
-| v1.1.1   | Fixed a bug where a staff member can edit the admin details |
-| v1.2.0   | Added User Details view with specific user activity log |
-| v1.2.1   | Fixed a minot import bug |
+| v1.0.0   | • Initial release as pip package |
+| v1.0.1   | • Fixed a couple of new issues as a pip package |
+| v1.0.2   | • Fixed the readme and building files |
+| v1.0.3   | • Still getting the hang of this pip publish thing |
+| v1.0.4   | • Honestly still messing with and trying settings and stuff out |
+| v1.1.0   | • OK, finally a working seamless micro-users app |
+| v1.1.1   | • Fixed a bug where a staff member can edit the admin details |
+| v1.2.0   | • Added User Details view with specific user activity log |
+| v1.2.1   | • Fixed a minor import bug |
+| v1.2.3   | • Separated user detail view from table for consistency<br> • Optimized the new detail + log view for optimal compatibiliyy with users |
